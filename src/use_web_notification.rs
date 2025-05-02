@@ -228,7 +228,7 @@ impl From<NotificationDirection> for web_sys::NotificationDirection {
 ///
 /// The following implementations are missing:
 /// - `renotify`
-/// - `vibrate`  
+/// - `vibrate`
 /// - `silent`
 /// - `image`
 #[derive(DefaultBuilder, Clone)]
@@ -339,7 +339,7 @@ impl From<&UseWebNotificationOptions> for web_sys::NotificationOptions {
 /// See [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/notification) for more info.
 ///
 /// The following implementations are missing:
-/// - `vibrate`  
+/// - `vibrate`
 /// - `silent`
 /// - `image`
 #[derive(DefaultBuilder, Default)]
@@ -448,7 +448,7 @@ impl From<web_sys::NotificationPermission> for NotificationPermission {
             web_sys::NotificationPermission::Default => Self::Default,
             web_sys::NotificationPermission::Granted => Self::Granted,
             web_sys::NotificationPermission::Denied => Self::Denied,
-            web_sys::NotificationPermission::__Nonexhaustive => Self::Default,
+            _ => Self::Default,
         }
     }
 }
